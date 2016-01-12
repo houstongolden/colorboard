@@ -1,19 +1,5 @@
 <p id="notice"><%= notice %></p>
-<button id="reset-to-white">Reset to white</button>
-<p>
-  <strong>Name:</strong>
-  <%= @board.name %>
-</p>
 
-<table class="colorboard">
-  <% @board.rows_count.times do |row| %>
-    <tr>
-      <% @board.columns_count.times do |col| %>
-        <td class="js-white"></td>
-      <% end %>
-    </tr>
-  <%end%>
-</table>
 
 <%= link_to 'Edit', edit_board_path(@board) %> |
 <%= link_to 'Back', boards_path %>

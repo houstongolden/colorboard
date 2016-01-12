@@ -1,6 +1,41 @@
-<h1>Editing Board</h1>
 
-<%= render 'form' %>
+<%= form_for(@board) do |f| %>
+  <% if @board.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@board.errors.count, "error") %> prohibited this board from being saved:</h2>
+      <button id="reset-to-white">Reset to white</button>
+
+      <table class="colorboard">
+        <% @board.rows_count.times do |row| %>
+          <tr>
+            <% @board.columns_count.times do |col| %>
+              <td class="js-white"></td>
+            <% end %>
+          </tr>
+        <%end%>
+      </table>
+      
+      <ul>
+      <% @board.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :color_data %><br>
+    <%= f.text_area :color_data %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
 
 <%= link_to 'Show', @board %> |
 <%= link_to 'Back', boards_path %>
