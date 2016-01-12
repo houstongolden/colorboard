@@ -21,3 +21,6 @@ $ ->
     else
       $this.css('background-color': '#fff')
     $this.toggleClass 'js-white'
+
+  $('#reset-to-white').on 'click', ->
+    $tds.addClass('js-white').css('background-color': '#fff')
