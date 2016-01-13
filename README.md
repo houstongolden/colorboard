@@ -2,11 +2,11 @@
 
 This is a Rails 4, Ruby 2.1.2 application that let's you build custom sized grids with random colors and save them to a gallery. 
 
-[View Live Demo](https://alt-colorboard.herokuapp.com/).
+[View Live Demo](https://alt-colorboard.herokuapp.com/)
 
 ## Local Installation
 
-```js
+```
 $ git clone https://github.com/houstongolden/colorboard.git
 $ cd colorboard
 $ bundle install
@@ -54,7 +54,4 @@ Please feel free to use a different markup language if you do not plan to run
 
 ## Bonus:
 
- * Create a gallery of all boards which are viewable and editable by any user. **yep**
-
- <img src="https://raw.githubusercontent.com/benshine/tiles/master/app/assets/images/altschool-colorboard.png">
 
