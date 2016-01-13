@@ -14,7 +14,7 @@
   </thead>
 
   <tbody>
-    <% @boards.each do |board| %>
+    <% @boards.order('created_at DESC').each do |board| %>
       <tr>
         <td class="board-name"><%= board.name %></td>
         <td><%= render board, disabled: true %></td>
