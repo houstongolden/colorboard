@@ -1,9 +1,59 @@
 .table > thead > tr > th {
-    vertical-align: bottom;
     border-bottom: 1px solid #ddd !important;
     font-family: Lato;
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #1E7FA5;
 }
 
 a {
   font-family: Lato;
+}
+
+tr {
+  transition: all 300ms 300ms;
+}
+
+.btn-info {
+    border-radius: 2px !important;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 100ms 100ms;
+}
+
+.btn-success {
+    letter-spacing: 1px;
+    padding: 10px;
+    border-radius: 2px !important;
+    font-size: 18px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.12);
+    transition: all 100ms 100ms;
+}
+
+.btn-default {
+    letter-spacing: 1px;
+    padding: 10px;
+    border-radius: 2px !important;
+    font-size: 18px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.12);
+    transition: all 100ms 100ms;
+}
+
+.btn-gh {
+    letter-spacing: 1px;
+    padding: 10px;
+    border-radius: 2px !important;
+    font-size: 16px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.12);
+    transition: all 100ms 100ms;
+    &:hover {
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+}
+
+.fa-github:before {
+    content: "\f09b";
+    font-size: 14px;
 }

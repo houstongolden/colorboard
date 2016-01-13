@@ -1,32 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="alt-h1">Color Board Gallery</h1>
+<div class="header-cover">
+  <h1 class="alt-h1">Color Board Gallery</h1>
+</div>
 
 <br />
 
-<table class="boards-list table table-hover">
-  <thead class="list-header">
-    <tr>
-      <th>Name</th>
-      <th>Preview</th>
-      <th>Link</th>
-    </tr>
-  </thead>
+<div class="main-div">
 
-  <tbody>
-    <% @boards.order('created_at DESC').each do |board| %>
+  <table class="boards-list table table-hover">
+    <thead class="list-header">
       <tr>
-        <td class="board-name"><%= board.name %></td>
-        <td><%= render board, disabled: true %></td>
-        
-        
-        <td><%= link_to 'View Board', edit_board_path(board), :class => "btn btn-primary" %></td>
-        <!-- <td><%# link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        <th>Name</th>
+        <th>Preview</th>
+        <th>Link</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @boards.order('created_at DESC').each do |board| %>
+        <tr>
+          <td class="board-name"><%= board.name %></td>
+          <td><%= render board, disabled: true %></td>
+          
+          
+          <td><%= link_to 'View Board', edit_board_path(board), :class => "btn btn-info" %></td>
+          <!-- <td><%# link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+</div>
 
 <%# link_to 'New Board', new_board_path %>

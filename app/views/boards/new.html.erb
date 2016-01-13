@@ -1,7 +1,10 @@
-<h1 class="alt-h1">New Board</h1>
+<div class="header-cover">
+  <h1 class="alt-h1">New Board</h1>
+</div>
 
 <br />
 
 <%= render 'form' %>
 
-<%= link_to 'Back', boards_path %>
+<%# link_to 'Back', boards_path, :class => "back-btn" %>
+<a href="/" class="back-btn"><i class="fa fa-arrow-left"></i> Back to Gallery</a>

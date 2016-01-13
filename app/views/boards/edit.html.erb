@@ -1,34 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="main-div board-page">
 
-<%# link_to 'Back to Gallery', boards_path %>
+  <p id="notice"><%= notice %></p>
 
-<a href="/" class="back-btn"><i class="fa fa-arrow-left"></i> Back to Gallery</a>
+  <%# link_to 'Back to Gallery', boards_path %>
 
-<%= form_for(@board) do |f| %>
-  <% if @board.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@board.errors.count, "error") %> prohibited this board from being saved:</h2>
+  <a href="/" class="back-btn"><i class="fa fa-arrow-left"></i> Back to Gallery</a>
 
-      <ul>
-      <% @board.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <%= form_for(@board) do |f| %>
+    <% if @board.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@board.errors.count, "error") %> prohibited this board from being saved:</h2>
+
+        <ul>
+        <% @board.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <br />
+
+    <div class="field form-group">
+      <label>Name (you can edit the name)</label><br>
+      <%= f.text_field :name, :class => "form-control" %>
     </div>
+
+    <%= f.hidden_field :color_data %>
+
+    <%= f.submit "Save", id: "save-btn", :class => "btn btn-success" %>
+
+    <%= render @board %>
+    
   <% end %>
 
-  <br />
-
-  <div class="field form-group">
-    <label>Name (you can edit the name)</label><br>
-    <%= f.text_field :name, :class => "form-control" %>
-  </div>
-
-  <%= f.hidden_field :color_data %>
-
-  <%= f.submit "Save", id: "save-btn", :class => "btn btn-success" %>
-
-  <%= render @board %>
-  
-<% end %>
-
+</div>
