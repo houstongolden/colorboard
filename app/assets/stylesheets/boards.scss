@@ -1,6 +1,4 @@
-// Place all the styles related to the boards controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 
 .colorboard {
   width: 100%;
@@ -15,12 +13,18 @@
  .boards-list .colorboard {
   width: 150px;
   height: 150px;
-  margin-top: 0px;
+  margin-top: -16px;
   td {
     height: 15px;
     width: 15px;
   }
  }
+
+.board-name {
+  font-family: Lato;
+  font-size: 16px;
+  text-transform: capitalize;
+}
 
 .main-div {
   margin-top: 20px;
@@ -39,6 +43,7 @@
 
 .alt-h1 {
   color: #2AAADD;
+  font-family: Lato;
 }
 
 .back-btn {

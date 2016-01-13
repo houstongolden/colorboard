@@ -19,9 +19,9 @@
 
   <br />
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="field form-group">
+    <label>Name (you can edit the name)</label><br>
+    <%= f.text_field :name, :class => "form-control" %>
   </div>
 
   <%= f.hidden_field :color_data %>
