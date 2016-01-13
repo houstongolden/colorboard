@@ -33,6 +33,7 @@ $ ->
     $tds
       .css('background-color': WHITE)
       .attr('data-color', WHITE)
+    false
 
   # before submitting, put actual color data to board_data input
   $('#save-btn').on 'click', ->

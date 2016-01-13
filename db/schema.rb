@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160112225552) do
     t.string   "name"
     t.integer  "columns_count"
     t.integer  "rows_count"
-    t.text     "color_data"
+    t.text     "color_data" #JSON string containing an array of colors
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
