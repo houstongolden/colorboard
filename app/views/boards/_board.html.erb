@@ -1,0 +1,16 @@
+<% disabled ||= false %>
+
+<% unless disabled %>
+  <button id="reset-to-white">Reset to white</button>
+<% end %>
+
+<table class="colorboard <%= 'js-board' unless disabled %>">
+  <% board.rows_count.times do |row| %>
+    <tr>
+      <% board.columns_count.times do |col| %>
+        <% color = board.color_at(row, col) %>
+        <td data-color="<%=color%>" style="background-color: <%=color%>"></td>
+      <% end %>
+    </tr>
+  <%end%>
+</table>
