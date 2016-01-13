@@ -1,8 +1,10 @@
 <% disabled ||= false %>
 
 <% unless disabled %>
-  <button id="reset-to-white">Reset to white</button>
+  <button id="reset-to-white" class="btn btn-default">Reset to white</button>
 <% end %>
+
+<br />
 
 <table class="colorboard <%= 'js-board' unless disabled %>">
   <% board.rows_count.times do |row| %>
