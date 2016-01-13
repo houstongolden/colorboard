@@ -31,6 +31,10 @@
   max-height: 39px;
   margin-top: 3px;
   padding-left: 3px;
+  transition: all 300ms 300ms;
+  &:hover{
+    opacity: .7;
+  }
 }
 
 .alt-h1 {
@@ -38,5 +42,14 @@
 }
 
 .back-btn {
+  text-decoration: none;
+}
 
+footer a:hover,
+footer a:active {
+  text-decoration: none;
+}
+
+.footer-div {
+  padding: 20px;
 }

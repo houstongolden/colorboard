@@ -20,9 +20,7 @@ Then go to [http://localhost:3000](http://localhost:3000)
 Most of the work is in the [board model](https://github.com/houstongolden/colorboard/blob/master/app/models/board.rb) and [front-end coffeescript](https://github.com/houstongolden/colorboard/blob/master/app/assets/javascripts/boards.coffee) with minimal [SCSS](https://github.com/houstongolden/colorboard/blob/master/app/assets/stylesheets/boards.scss).
 
 
-## Prompt (Why did I build this?)
-
-### Technical Programming Question / Coding Challenge Specifications:
+## Coding Challenge Specifications:
 
 * :heavy_check_mark: Create a board of n x m tiles on a web page. Each tile on the board will start as white, but when clicked will toggle between a generated random color and returning to white. Each time a tile is toggled to a random color it should generate a new random color value.
  
